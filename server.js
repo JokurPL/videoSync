@@ -24,7 +24,7 @@ io.on('connection', socket => {
 
 server.listen(app.get('port'), () => {
     console.log(`Listening on ${server.address().port}`);
-    console.log(`https://localhost:${server.address().port}`);
+    console.log(`http://localhost:${server.address().port}`);
 });
 
 module.exports = server;

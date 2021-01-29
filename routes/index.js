@@ -9,6 +9,7 @@ const LoginController = require('../controllers/LoginController');
 router.get('/', HomeController.home);
 router.get('/watch', WatchtingController.watch);
 router.get('/video', VideoController.video);
+router.get('/cda/:videoId', WatchtingController.cda);
 
 router.post('/login', LoginController.login);
 

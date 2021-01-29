@@ -1,16 +1,15 @@
 html
     head
         title uwu
-        link(rel="stylesheet", href="css/movie.css")
-    body(onload="loginCheck();")
+        link(rel="stylesheet", href="/css/movie.css")
+    body
         main
             div.video 
-                video(controls id="video")
-                    source(src="/video", type='video/mp4')
+                iframe(id='cda', src="http://ebd.cda.pl/620x368/" + videoId, scrolling="no", allowfullscreen, name="v2", allow="encrypted-media")
             div.chat 
                 iframe(src='https://www.twitch.tv/embed/policjant___/chat?darkpopout&parent=uwukino.azurewebsites.net&parent=localhost' )
 
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
         script(src="/socket.io/socket.io.js")
         script(src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js")
-        script(src="js/sync.js")
+        script(src="/js/sync.js")

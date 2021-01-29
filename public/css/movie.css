@@ -6,6 +6,7 @@
 
 body {
     background-color: rgb(24, 24, 27);
+    height: 100%;
 }
 
 main {
@@ -13,11 +14,11 @@ main {
     height: 100vh; */
 }
 
-video {
+video, #cda {
     width: 100%;
     z-index: 1;
-    /* height: auto;
-    position: relative;
+    border: none;
+    /* position: relative;
     top: 50; */
 }
 
@@ -47,5 +48,8 @@ iframe {
     }
     .chat {
         width: 100% !important;
+    }
+    main {
+        height: 50%;
     }
 }
