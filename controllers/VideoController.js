@@ -9,7 +9,7 @@ exports.video = (req, res) => {
         res.status(400).send("uwu (400)");  
     }
     
-    const videoPath = path.join(__dirname, "..", "public") + "/movies/film1.mp4";
+    const videoPath = path.join(__dirname, "..", "public") + "/film1.mp4";
     const videoSize = fs.statSync(videoPath).size;
 
     const CHUNK_SIZE = 10 ** 6; // 1MB
