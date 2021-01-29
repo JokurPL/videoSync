@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(24, 24, 27);
+    background-color: rgb(24, 24, 27) !important;
 }
 
 main {
@@ -40,12 +40,62 @@ iframe {
     z-index: 999;
 }
 
+.options {
+    position: absolute;
+    right: 11%;
+    bottom: .5%;
+    display: flex;
+}
+
+.options .btn {
+    width: 43px;
+    padding: 5% !important;
+    background-color: #9147ff !important;
+    border: none !important;
+    outline: none !important;
+    margin: 5% !important;
+}
+
+.options .btn:focus {
+    display: none !important;
+}
+
+.options .btn:hover {
+    background: rgba(119, 44, 232) !important;
+}
+
 @media (min-width:100px) and (max-width:1000px) {
     .video {
         width: 100% !important;
-        float: none;
+        display: flex;
+    }
+    video {
+        position: relative;
+        top: 0;
+        width: 100% !important;
+        height: auto !important;
+        /* object-fit: cover; */
+    }
+    iframe {
+        width: 100% !important;
+        height: 100% !important;
     }
     .chat {
         width: 100% !important;
+        height: 400px;
+    }
+
+    .options {
+        position: relative;
+        left: 0%;
+        bottom: 8%;
+        display: flex;
+    }
+
+    .options .btn {
+        width: auto !important;
+        margin: 0 !important;
+        margin-left: 2% !important; 
+        padding: 1% !important;
     }
 }

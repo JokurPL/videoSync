@@ -3,10 +3,24 @@ let video = document.getElementById('video');
 
 let code = Cookies.get("code")
 let perm = false;
-let seek = false;
+
 if (code == 'bcc0823c08f2dc276bb8c7095bac20f7') {
     perm = true;
+} else {
+    $('#upload').hide();
 }
+
+$('#syncBtn').click(() => {
+    if (!perm) {
+        socket.emit('sync-req');
+    }
+});
+
+socket.on('sync', (data) => {
+    if (perm) {
+        socket.emit('current-time', video.currentTime);
+    }
+});
 
 socket.on('state-set', data => {
     if (data == '1' && !perm) {
