@@ -10,7 +10,16 @@ if (code == 'bcc0823c08f2dc276bb8c7095bac20f7') {
     $('#upload').hide();
 }
 
-$('#syncBtn').click(() => {
+socket.on('state-set', data => {
+    if (data == '1' && !perm) {
+        video.play();
+    }
+    else if (data != '1' && !perm) {
+        video.pause();
+    }
+});
+
+$(document).on("click tap touchstart", "#syncBtn", () => {
     if (!perm) {
         socket.emit('sync-req');
     }
@@ -19,15 +28,6 @@ $('#syncBtn').click(() => {
 socket.on('sync', (data) => {
     if (perm) {
         socket.emit('current-time', video.currentTime);
-    }
-});
-
-socket.on('state-set', data => {
-    if (data == '1' && !perm) {
-        video.play();
-    }
-    else if (data != '1' && !perm) {
-        video.pause();
     }
 });
 
