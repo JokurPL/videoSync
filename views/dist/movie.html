@@ -1,0 +1,23 @@
+
+<html>
+  <head>
+    <title>uwu</title>
+    <link rel="stylesheet" href="css/movie.css"/>
+  </head>
+  <body onload="loginCheck();">
+    <main>
+      <div class="video"> 
+        <video controls="controls" id="video">
+          <source src="/video" type="video/mp4"/>
+        </video>
+      </div>
+      <div class="chat"> 
+        <iframe src="https://www.twitch.tv/embed/policjant___/chat?darkpopout&amp;parent=moviesync.azurewebsites.net&amp;parent=www.moviesync.azurewebsites.net"></iframe>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="js/sync.js"></script>
+  </body>
+</html>

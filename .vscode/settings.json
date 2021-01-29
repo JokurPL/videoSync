@@ -1,0 +1,10 @@
+{
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "background.filepath": "https://i.imgur.com/0AsaLWG.png",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/6a8e78c6-bb8f-4cff-aa01-c71819b9eec0/resourceGroups/movieSync/providers/Microsoft.Web/sites/movieSync",
+    "appService.deploySubpath": "."
+}
