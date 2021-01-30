@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const socket = require('socket.io');
 
 exports.video = (req, res) => {
     const range = req.headers.range;
@@ -9,10 +8,10 @@ exports.video = (req, res) => {
         res.status(400).send("uwu (400)");  
     }
     
-    const videoPath = path.join(__dirname, "..", "public") + "/film.mp4";
+    const videoPath = 'path.join(__dirname, "..", "public") + "/film.mp4"';
     const videoSize = fs.statSync(videoPath).size;
 
-    const CHUNK_SIZE = 10 ** 6; // 1MB
+    const CHUNK_SIZE = 10 ** 6;
     const start = Number(range.replace(/\D/g, ""));
     const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
     const contentLength = end - start + 1;
