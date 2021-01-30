@@ -3,9 +3,11 @@ let video = document.getElementById('video');
 
 let code = Cookies.get("code")
 let perm = false;
-let seek = false;
+
 if (code == 'bcc0823c08f2dc276bb8c7095bac20f7') {
     perm = true;
+} else {
+    $('#upload').hide();
 }
 
 socket.on('state-set', data => {
@@ -14,6 +16,18 @@ socket.on('state-set', data => {
     }
     else if (data != '1' && !perm) {
         video.pause();
+    }
+});
+
+$(document).on("click tap touchstart", "#syncBtn", () => {
+    if (!perm) {
+        socket.emit('sync-req');
+    }
+});
+
+socket.on('sync', (data) => {
+    if (perm) {
+        socket.emit('current-time', video.currentTime);
     }
 });
 

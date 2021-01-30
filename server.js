@@ -20,6 +20,10 @@ io.on('connection', socket => {
     socket.on('current-time', data => {
         io.emit('change-current-time', data);
     });
+
+    socket.on('sync-req', data => {
+        io.emit('sync');
+    });
 });
 
 server.listen(app.get('port'), () => {
