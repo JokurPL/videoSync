@@ -12,12 +12,12 @@ html(lang="pl")
             form(action='/login' method='POST')
                 img.mb-4.mx-auto.d-block(src='img/home.png' alt='' width='120')
                 h1.h3.mb-3.fw-normal.text-center uwu
-                label.visually-hidden(for='inputEmail') Pseudonim
-                input#inputEmail.form-control(type='text' placeholder='Pseudonim' required='' autofocus='' name='name')
-                label.visually-hidden(for='inputPassword') Hasło administratora (opcjonalne)
-                input#inputPassword.form-control(type='password' placeholder='Hasło administratora (opcjonalne)' name='password')
+                label.visually-hidden(for='inputEmail') Nickname
+                input#inputEmail.form-control(type='text' placeholder='Nickname' required='' autofocus='' name='name')
+                label.visually-hidden(for='inputPassword') Admin password (optional)
+                input#inputPassword.form-control(type='password' placeholder='Admin password (optional)' name='password')
                 .checkbox.mb-3
-                button.w-100.btn.btn-lg.btn-primary(type='submit') Wejdź
+                button.w-100.btn.btn-lg.btn-primary(type='submit') Join
                 p.mt-5.mb-3.text-muted &copy; 
                     a(href="https://github.com/JokurPL/" target="_blank") giga przegryw
 

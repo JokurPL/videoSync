@@ -13,20 +13,20 @@ html(lang="pl")
             .progress.hidden(style='width: 80%; margin: 2% auto;')
                 .progress-bar.progress-bar-striped.progress-bar-animated(role='progressbar' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
             .alert.alert-success.hidden(role='alert')
-                | Pomyślnie przesłano plik. 
+                | The file was successfully transferred 
                 a(href="/watch" style="text-decoration: none !important") Oglądaj
             .alert.alert-danger.hidden(role='alert')
-                | Nie udało się przesłać pliku
-            h1.display-4 Prześlij film
+                | Upload file failed
+            h1.display-4 Upload movie
             p.lead
-                | Czas przesyłania może się wydłużyc przy znacznym obciążeniu serwera 
+                | uwu owo
                 hr.my-4
             form(id="videoForm", method='POST', action='/upload/save', enctype="multipart/form-data")
                 div
-                    label.form-label(for='formFileLg') Plik video
+                    label.form-label(for='formFileLg') Video file
                     input#formFileLg.form-control.form-control-lg(type='file', name='video')
                 br
-                button.btn.btn-primary.btn-lg(type='submit') Prześlij
+                button.btn.btn-primary.btn-lg(type='submit') Upload
 
 
 
