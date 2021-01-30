@@ -5,8 +5,8 @@ html
         link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous")
     body(onload="loginCheck();")
         main
-            div.video
-                video(controls id="video")
+            div.video.embed-responsive.embed-responsive-16by9
+                video.embed-responsive-item(controls id="video")
                     source(src="/video" type='video/mp4')
             div.chat 
                 iframe(src='https://www.twitch.tv/embed/policjant___/chat?darkpopout&parent=moviesync.herokuapp.com&parent=www.moviesync.herokuapp.com' )
