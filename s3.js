@@ -1,5 +1,5 @@
 const aws = require('aws-sdk');
-const config = require('./aws/config.json');
+const config = require('./settings.json');
 const fs = require('fs');
 const path = require('path');
 

@@ -1,0 +1,5 @@
+{
+    "isAWS": true,
+    "secretAccessKey": "your secret access key",
+    "accessKeyId": "your secret access key id"
+}
