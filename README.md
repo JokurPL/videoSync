@@ -30,18 +30,12 @@ You have to change ```&parent``` attribute in ```views/movie.pug``` in ```infram
     ]
 }
 ```
-  2. Create ```aws``` folder 
-  3. In ```aws``` folder create ```config.json```
-  4. In ```config.json```:
-```json
-{
-    "secretAccessKey": "your secret access key",
-    "accessKeyId": "your access key id"
-}
-```
+  2. In ```settings.json``` put your ```secretAccessKey``` and ```accessKeyId```
 
 ### Local storage
-   1. In ```views/movie.pug``` change in video element ``src`` attribute to ```/video```
+   1. In ```settings.json``` set ```isAWS``` to ```false```
+   2. In ```settings.json``` put your ```secretAccessKey``` and ```accessKeyId```
+   3. In ```views/movie.pug``` change in video element ``src`` attribute to ```/video```
 
 Start app: 
 ```    
