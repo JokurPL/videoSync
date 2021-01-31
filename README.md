@@ -30,15 +30,7 @@ You have to change ```&parent``` attribute in ```views/movie.pug``` in ```infram
     ]
 }
 ```
-  2. Create ```aws``` folder 
-  3. In ```aws``` folder create ```config.json```
-  4. In ```config.json```:
-```json
-{
-    "secretAccessKey": "your secret access key",
-    "accessKeyId": "your access key id"
-}
-```
+  2. In ```settings.json``` put your ```secretAccessKey``` and ```accessKeyId```
 
 ### Local storage
    1. In ```settings.json``` set ```isAWS``` to ```false```
